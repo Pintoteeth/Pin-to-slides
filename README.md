@@ -1,158 +1,81 @@
-# Marp Slides Template
-
-[Use this template!](https://github.com/codebytes/marp-slides-template/generate)
-
-Create a Marp presentation site that can be built and published on [GitHub Pages] using this minimal template. The site features:
-
-- Marp integration with CSS variable-based theming
-- A GitHub Pages / Actions workflow for build and publish ([See a preview](http://chris-ayers.com/marp-slides-template/))
-- A DevContainer/CodeSpace configuration with Marp and Markdown preview extensions
-- Support for PDF and PowerPoint export via Marp CLI v4
-
-## Customization
-
-Feel free to customize the sites created with this template as you like!
-
-## Getting Started
-
-1. Click "[use this template]" to create a new site.
-2. Update the content of `slides/Slides.md` with your own presentation.
-
-## Custom Themes
-
-This template includes four custom themes in the `slides/themes` folder:
-
-- **custom** - A minimal base theme
-- **custom-default** - Based on the built-in default theme (recommended)
-- **custom-gaia** - Based on the built-in gaia theme
-- **custom-uncover** - Based on the built-in uncover theme
-
-### Theme Customization with CSS Variables
-
-All themes support CSS variable customization (Marp v4+ best practice):
-
-```css
-:root {
-  --color-background: #ffffff;
-  --color-foreground: #333333;
-  --color-highlight: #0366d6;
-  --color-dimmed: #6a737d;
-}
-```
-
-### Available Theme Classes
-
-| Class | Description |
-|-------|-------------|
-| `lead` | Centered title slide layout |
-| `invert` | Dark theme for emphasis slides |
-| `columns` | Two-column grid layout |
-| `columns3` | Three-column grid layout |
-| `small` | Smaller text for dense content |
-
-Use with `<!-- _class: classname -->` directive, or combine: `<!-- _class: lead invert -->`
-
-### Using a Theme
-
-Add the theme reference in the frontmatter of your slide deck:
-
-```markdown
 ---
 marp: true
-theme: custom-default
+theme: default
 paginate: true
-math: mathjax
+style: |
+  section {
+    background-color: #f8f9fa;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  h1, h2 {
+    color: #1d1d1f;
+  }
+  strong {
+    color: #0066cc;
+  }
 ---
-```
 
-For additional themes, add them to the devcontainer and follow the [Marp custom theme documentation](https://marpit.marp.app/theme-css).
+# 悦见 4D 早矫智塑积木包
+### 数智化早矫方案：重新定义儿童早期矫正的舒适度标准
 
-## Marp Directives Quick Reference
+---
 
-| Directive | Description |
-|-----------|-------------|
-| `paginate: true` | Enable page numbers (frontmatter) |
-| `math: mathjax` | Enable math equations (frontmatter) |
-| `<!-- _paginate: skip -->` | Skip pagination on current slide |
-| `<!-- _class: lead -->` | Centered title slide |
-| `<!-- _class: invert -->` | Dark theme slide |
-| `![bg](url)` | Full background image |
-| `![bg left](url)` | Split background (left) |
-| `![bg right](url)` | Split background (right) |
-| `![bg opacity:0.3](url)` | Background with opacity |
-| `# <!--fit--> Text` | Auto-fit text to slide width |
+## 🛑 临床痛点：为什么放弃传统活动矫治？
+*(传统扩弓器、Twinblock、肌激动器等)*
 
-## Math Equations
+* **依从性极差：** 异物感强，大舌头，孩子抗拒佩戴。
+* **临床管理难：** 口腔卫生极易恶化，装置易丢失。
+* **复诊体验差：** 椅旁调磨痛苦，医患沟通成本极高。
 
-Enable with `math: mathjax` in frontmatter:
+---
 
-```markdown
-Inline: $E = mc^2$
+## 🚀 黑科技破局：什么是 4D 儿童积木包？
+**舒适数字化直接打印隐形矫治器**
 
-Block:
-$$
-\int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi}
-$$
-```
+* **直接打印 (Direct 3D Print)：** 告别传统压膜，力学表达更精准。
+* **Hybrid 积木包概念：** 18 副精细化管理。
+* **机制创新：** 将传统功能矫治（扩弓、导下颌等）像搭积木一样，精准编排进隐形牙套中。
 
-## Mermaid Diagrams
+---
 
-Include this script tag once per slide deck to enable Mermaid diagrams:
+## 💎 核心产品优势 (Core Advantages)
 
-```html
-<script type="module">
-  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
-  mermaid.initialize({ startOnLoad: true });
-</script>
-```
+1. **隐形舒适：** 厚度均匀，无异物感，孩子舒心，妈妈安心。
+2. **韧性记忆：** 专属防错设计——受压变形后，热水浸泡瞬间恢复原状，不耽误治疗进度。
+3. **数智驱动：** AI 算法模拟颌骨生长潜力，治疗结果可视化、可预测。
 
-Then use Mermaid syntax in a div:
+---
 
-```html
-<div class="mermaid">
-flowchart LR
-    A[Start] --> B[End]
-</div>
-```
+## 📊 临床适应症与治疗范围
+**服务周期：1 年 | 矫治器数量：18 副 | 治疗范围：全口**
 
-## Publishing on GitHub Pages
+* **简单病例排齐：** * 轻度牙弓狭窄
+  * 轻度牙列拥挤
+* **I 期骨性问题干预：** * 解决下颌后缩、上颌前突
+  * 早期地包天（前牙反颌）
+  * 口呼吸面型改善
 
-1. In your GitHub repo, navigate to `Settings` > `Pages` > `Build and deployment`.
-2. Select `Source`: `GitHub Actions`.
-3. If any Actions failed, go to the `Actions` tab and click on `Re-run jobs`.
+---
 
-## Local Build and Preview
+## 📦 结构化交付：包含项目
 
-1. Install [Visual Studio Code](https://code.visualstudio.com/).
-2. Install the [Marp for VS Code extension](https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode).
-3. Open `slides/Slides.md` in VS Code.
+* **精准建档：** 先临三维数字化口腔扫描与全面检查。
+* **深度筛查：** 4D 儿童早矫（牙骨肌、气道、身姿体态）联合筛查及方案设计。
+* **定制产品：** 18 副 4D 直接打印矫治器（可按需定制 iActivator/口外弓等附件）。
+* **全生命周期：** 专属定期复诊监控。
 
-### CLI Export (Optional)
+---
 
-Install Marp CLI for PDF/PPTX export:
+## 💼 临床转化与升单策略 (Marketing)
+**线下接诊话术（实物对比法）**
 
-```bash
-npm install -g @marp-team/marp-cli
+* **价值传递：** 桌面并排展示传统钢丝基托 vs 4D打印牙套。“以前出效果慢、磨嘴，现在我们将功能启动‘编排’进隐形牙套，孩子配合度高，效果才有绝对保证。”
+* **升单埋伏：** “积木包专注功能启动期。后续换牙期若有复杂排列需求，可直接补差价升级至 2年/3年期 全周期管理。”
 
-# Export to PDF
-marp --theme-set slides/themes --pdf slides/Slides.md
+---
 
-# Export to PPTX
-marp --theme-set slides/themes --pptx slides/Slides.md
-```
+## ⭐ 评价引导与口碑裂变策略
 
-> **Note:** Marp CLI v4 requires Node.js 18+ and supports both Chrome and Firefox for rendering.
-
-## Licensing and Attribution
-
-This repository is licensed under the [MIT License]. Reuse or extend the code as you wish, but include the original license. The deployment GitHub Actions workflow is based on GitHub's starter workflows.
-
-## Resources
-
-- [Use this template](https://github.com/codebytes/marp-slides-template/generate)
-- [GitHub Pages Documentation](https://docs.github.com/en/pages)
-- [CommonMark Markdown Syntax](https://commonmark.org/help/)
-- [Marp Official Repository](https://github.com/marp-team/marp)
-- [Marpit Framework Documentation](https://marpit.marp.app/markdown)
-- [Marp CLI v4 Documentation](https://github.com/marp-team/marp-cli)
-- [Marp for VS Code](https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode)
+* **破冰触点：** 孩子戴上第一副牙套的次日跟进。
+* **引导话术核心：** 强调“夜间佩戴、解放妈妈、不磨嘴、高效黑科技”。
+* **激励机制：** 在美团/大众点评分享真实体验，即赠送定制防丢盒或正畸专用清洁大礼包。
